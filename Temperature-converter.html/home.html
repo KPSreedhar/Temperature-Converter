@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            height: 410px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #6c757d;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .conversion-example {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-left: 3px solid #007bff;
+            margin-left: 20px;
+        }
+        .conversion-example p {
+            margin: 0;
+        }
+        .container a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 4px solid #007bff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 0px;
+            background-color: #007bff;
+            padding: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        .container button {
+            width: 30%;
+            padding: 10px;
+            background-color: #007bff; /* Blue background */
+            border: none;
+            color: #fff; /* White text */
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-left: 280px;
+           
+        }
+        .container button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px 0;
+            
+            bottom: 0;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Temperature Converter</h1>
+    </header>
+
+    <nav>
+       
+        <a href="index.html">Temperature Converter</a>
+        <a href="https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature" target="_blank">More info</a>
+    </nav>
+
+    <div class="container">
+        <h2>About Temperature Converter</h2>
+        <p>This website provides a simple tool to convert temperatures between Celsius (°C) and Fahrenheit (°F).</p>
+        
+        <div class="conversion-example">
+            <h3>Conversion Example</h3>
+            <p>Convert 20°C to Fahrenheit:</p>
+            <p>20°C is equal to <strong>68°F</strong>.</p>
+        </div>
+        
+        <h3>How to Use:</h3>
+        <ol>
+            <li>Enter the temperature in the input field.</li>
+            <li>Select the unit of the temperature (Celsius or Fahrenheit).</li>
+            <li>Click the <strong>Convert</strong> button.</li>
+            <li>The converted temperature will be displayed below.</li>
+        </ol>
+        <a href="index.html"><button type="submit" >Go to Converter</button></a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Temperature Converter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

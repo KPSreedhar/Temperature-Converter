@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #6c757d;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+      
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 4px solid #007bff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 0px;
+            background-color: #007bff;
+            padding: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: 6.8%;
+            bottom: 0;
+            width: 100%;
+            
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+            width: 50%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            margin: 20px auto;
+        }
+       
+        .container h2 {
+            color: #007bff; /* Blue heading */
+            margin-bottom: 20px;
+        }
+        .container div {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .container input, .container select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+            box-sizing: border-box; /* Ensures padding is included in width calculation */
+        }
+        .container input:focus, .container select:focus {
+            outline: none;
+            border-color: #007bff; /* Blue border on focus */
+        }
+        .container button {
+            width: 30%;
+            padding: 10px;
+            background-color: #007bff; /* Blue background */
+            border: none;
+            color: #fff; /* White text */
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .container button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    text-align: center; /* Center align the text */
+    padding: 10px 0; /* Add padding to vertically center the text */
+    margin-left: 250px;
+    margin-bottom: -20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Temperature Converter</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature" target="_blank">More info</a>
+    </nav>
+
+    <div class="container" id="converter">
+        <h2>Temperature Converter</h2>
+        <div>
+            <label for="n">Degree:</label>
+            <input type="number" id="n" placeholder="Enter temperature">
+        </div>
+        <div>
+            <label for="d">Select Unit:</label>
+            <select id="d">
+                <option value="C">Celsius (C)</option>
+                <option value="F">Fahrenheit (F)</option>
+            </select>
+        </div>
+        
+        <button type="button" onclick="convertTemperature()">Convert</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Temperature Converter. All rights reserved.</p>
+    </footer>
+    <script>
+        function convertTemperature() {
+            const degreeInput = document.getElementById("n");
+            const unitInput = document.getElementById("d");
+            const resultDiv = document.getElementById("result");
+            
+            const n = Number(degreeInput.value);
+            const d = unitInput.value;
+
+            let result;
+            if (d === 'C') {
+                const fh = (n * 9/5) + 32;
+                result = `Result: ${n}°C is ${fh.toFixed(2)}°F`;
+            } else if (d === 'F') {
+                const ce = (n - 32) * 5/9;
+                result = `Result: ${n}°F is ${ce.toFixed(2)}°C`;
+            }
+
+            resultDiv.innerText = result;
+        }
+    </script>
+</body>
+</html>
